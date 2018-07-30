@@ -1,0 +1,18 @@
+{
+    "ServiceBus": {
+        "connectionString": "Endpoint=sb://notification-dev-bus.servicebus.windows.net/;SharedAccessKeyName=RootManageSharedAccessKey;SharedAccessKey=95rFLwwHHnum2RYvif8FCSJirnnhWBOnaIinoaEkzXI="
+    },
+ "ChannelDistributor": [
+        {
+            "key1": "IEM_Responsys",
+            "key2": "Plugin",
+            "key3":"Email",
+            "queueName": "APP.NM.PLUGIN.IEM.REQ.QUEUE.1"
+        },
+         {
+            "key1": "IEM_Responsys",
+            "key2": "Responsys",
+            "queueName": "app.nm.channel.responsys.distributor"
+        }
+    ]
+}

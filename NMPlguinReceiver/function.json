@@ -1,0 +1,28 @@
+{
+  "bindings": [
+    {
+      "name": "mySbMsg",
+      "type": "serviceBusTrigger",
+      "direction": "in",
+      "queueName": "app.nm.plugin.receiver",
+      "connection": "notification-dev-bus_RootManageSharedAccessKey_SERVICEBUS",
+      "accessRights": "Manage"
+    },
+    {
+      "type": "blob",
+      "name": "inputBlob",
+      "path": "nmtest/nmConfig.json",
+      "connection": "AzureWebJobsDashboard",
+      "direction": "in"
+    },
+    {
+      "type": "serviceBus",
+      "connection": "notification-dev-bus_RootManageSharedAccessKey_SERVICEBUS",
+      "name": "outputSbMsg",
+      "queueName": "app.nm.broker",
+      "accessRights": "Manage",
+      "direction": "out"
+    }
+  ],
+  "disabled": false
+}

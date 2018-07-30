@@ -1,0 +1,45 @@
+{
+  "bindings": [
+    {
+      "name": "mySbMsg",
+      "type": "serviceBusTrigger",
+      "direction": "in",
+      "queueName": "app.nm.core.1",
+      "connection": "notification-dev-bus_RootManageSharedAccessKey_SERVICEBUS",
+      "accessRights": "Listen"
+    },
+    {
+      "type": "documentDB",
+      "name": "outputDocument",
+      "databaseName": "domain-db",
+      "collectionName": "nm_test",
+      "createIfNotExists": false,
+      "connection": "cosmos-domain-dev_DOCUMENTDB",
+      "direction": "out"
+    },
+    {
+      "type": "serviceBus",
+      "connection": "notification-dev-bus_RootManageSharedAccessKey_SERVICEBUS",
+      "name": "outputSbMsg",
+      "queueName": "myinputqueue.error",
+      "accessRights": "Send",
+      "direction": "out"
+    },
+    {
+      "type": "blob",
+      "name": "inputBlob",
+      "path": "nmtest/nmConfig.json",
+      "connection": "AzureWebJobsDashboard",
+      "direction": "in"
+    },
+    {
+      "type": "serviceBus",
+      "connection": "notification-dev-bus_RootManageSharedAccessKey_SERVICEBUS",
+      "name": "outputSbMsgSucces",
+      "queueName": "app.nm.broker",
+      "accessRights": "Manage",
+      "direction": "out"
+    }
+  ],
+  "disabled": false
+}

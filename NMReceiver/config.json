@@ -1,0 +1,20 @@
+{
+
+  "Decryption": {
+    "key": "Bar12345Bar12345"
+  },
+
+   "ServiceBusconfig": [ {
+        "queueName":"APP.NM.PLUGIN.IEM.REQ.QUEUE.11",
+       "connectionString": "Endpoint=sb://notification-dev-bus.servicebus.windows.net/;SharedAccessKeyName=send;SharedAccessKey=Zo6oywNScZl0gIrGL+9h3jDV4e5coAzm4FbH4n2SKi0="
+        
+        
+      },
+      {
+        "queueName":"APP.NM.PLUGIN.IEM.REQ.QUEUE.2",
+        "connectionString": "Endpoint=sb://azure-pilot-dev.servicebus.windows.net/;SharedAccessKeyName=send;SharedAccessKey=n5KTLceKBJAktVjROE6XrOeVo8q/tqX9I/5CbwP50zM=;"
+        
+        
+      }
+      ]
+}
